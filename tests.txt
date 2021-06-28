@@ -1,0 +1,27 @@
+Describe: pigLatin()
+
+Test: "No characters, or non alpha numeric- give an error and end the function".
+Code: pigLatin("!27341#@$"), pigLatin(undefined).
+Expected Output: "Error, you failed miserably!"
+
+Test: "It will add 'way' to the end of words that begin with a vowel."
+Code: pigLatin("a");
+Expected Output: "away"
+or
+Code: pigLatin("okay")
+Expected Output: "okayway"
+
+Test: "Words beginning with one or more consonants, move all of the first consecutive consonants to the end of their word and add "ay".
+Code: pigLatin("code");
+Expected Output: "odecay":
+["code"
+c-ode
+ode-c-ay
+"odecay"]
+
+Test: "If the first consonants include "qu", move the "q" and the "u." to then end of word while concatenating "ay" to the end of the word.
+Code: pigLatin("quick");
+Expected Output: "ickquay":
+[quick
+qu-ick
+ick-qu-ay]
